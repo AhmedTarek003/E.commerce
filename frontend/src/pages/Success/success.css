@@ -1,0 +1,17 @@
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--blue-color);
+  flex-direction: column;
+}
+.home-link {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  margin-top: 30px;
+  padding: 7px 20px;
+  border-radius: 10px;
+}

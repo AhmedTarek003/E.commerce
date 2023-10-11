@@ -1,0 +1,33 @@
+.new-user {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 10px;
+  flex: 3;
+}
+.new-user-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.last-user {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  margin: 10px 20px;
+}
+.last-user-Image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--blue-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--white-color);
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.last-users .users-name {
+  font-size: 18px;
+  margin-left: 10px;
+}

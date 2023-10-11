@@ -1,0 +1,21 @@
+.add-prdocut {
+  display: flex;
+  min-height: calc(100vh - 400px);
+}
+.add-product-contaienr {
+  flex: 10;
+}
+.add-image-product-btn {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 3px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+@media (max-width: 767px) {
+  .add-prdocut {
+    flex-direction: column;
+  }
+}

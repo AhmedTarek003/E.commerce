@@ -1,0 +1,32 @@
+.admin-sidebar {
+  background-color: #fbfbff;
+  padding: 15px;
+  height: calc(100vh - 70px);
+  flex: 2;
+}
+.admin-dashboard-list-name {
+  display: flex;
+  align-items: center;
+  color: #928f8f;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 30px 0;
+}
+.menu-list {
+  margin: 10px 0;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    margin-bottom: 20px;
+  }
+  .admin-dashbord-lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .admin-dashboard-list-name {
+    font-size: 14px;
+  }
+}

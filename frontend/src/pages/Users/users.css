@@ -1,0 +1,10 @@
+.users-page {
+  min-height: calc(100vh - 400px);
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .users-page {
+    flex-direction: column;
+  }
+}

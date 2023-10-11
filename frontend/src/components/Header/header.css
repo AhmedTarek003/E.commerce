@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  position: relative;
+}
+
+/* Header Left */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-family: "Island Moments", cursive;
+  font-size: 50px;
+  color: black;
+}
+.search {
+  margin-left: 20px;
+  width: 400px;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  transition: 0.3s ease;
+  position: relative;
+}
+.search-form.clicked {
+  width: 100%;
+}
+.search-bar {
+  z-index: 999;
+  padding: 8px 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 17px;
+}
+.search-bar:focus {
+  outline: none;
+}
+.search-icon {
+  position: absolute;
+  z-index: 999;
+  right: 12px;
+  top: 9px;
+}
+.search-icon .s-icon {
+  font-size: 20px;
+  color: var(--gray-color);
+}
+/* Header Right */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.auth-btn {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  margin: 0px 2px;
+  width: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  letter-spacing: 2px;
+  border: 1px solid var(--blue-color);
+}
+.auth-btn:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--blue-color);
+  color: var(--blue-color);
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.userImage {
+  width: 35px;
+  height: 35px;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-size: 18px;
+  margin-left: 5px;
+}
+.cart {
+  cursor: pointer;
+}
+.drob-down-header {
+  position: absolute;
+  top: 53px;
+  right: 41px;
+  z-index: 99;
+  background-color: #eee;
+  padding: 16px 20px;
+  border-radius: 10px;
+}
+.admin-link {
+  color: black;
+}
+.logout {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.logout-icon {
+  font-size: 18px !important;
+  margin-right: 4px;
+}
+
+/* media Quiery */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 30px;
+  }
+  .search {
+    width: 70%;
+    margin-left: 5px;
+  }
+  .search-form {
+    width: 50%;
+  }
+  .search-form.clicked {
+    width: 100%;
+  }
+  .search-bar::placeholder {
+    font-size: 13px;
+  }
+  .search-icon .s-icon {
+    font-size: 15px;
+  }
+  .auth-btn {
+    width: 50px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin-bottom: 5px;
+    padding: 4px;
+  }
+  .auth-buttons {
+    flex-direction: column;
+    margin-right: 5px;
+  }
+  .drob-down-header {
+    top: 43px;
+    right: 5px;
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+}

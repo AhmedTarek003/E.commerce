@@ -1,0 +1,79 @@
+.users-table {
+  flex: 10;
+}
+.users-table-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--dark-color);
+  width: max-content;
+  margin: 15px auto;
+}
+.users-table-container {
+  padding: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-color);
+}
+thead {
+  background-color: black;
+  color: white;
+}
+tbody {
+  margin-top: 10px;
+}
+th,
+td {
+  text-align: center;
+}
+th {
+  font-size: 20px;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+}
+.table-user {
+  display: flex;
+  align-items: center;
+}
+.user-table-Image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 30px;
+}
+.table-user .table-user-username {
+  font-size: 17px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+.userAdmin-select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+}
+.delete-user {
+  color: var(--red-color);
+  cursor: pointer;
+}
+
+@media (max-width: 628px) {
+  .users-table-container {
+    overflow-x: scroll;
+  }
+  th,
+  td {
+    padding: 8px 13px;
+  }
+}

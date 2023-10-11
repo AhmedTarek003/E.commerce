@@ -1,0 +1,70 @@
+.login-page {
+  min-height: calc(100vh - 400px);
+}
+.auth-container {
+  width: 100%;
+}
+.auth-title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.form-auth {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-auth-group {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  width: 100%;
+  position: relative;
+}
+.form-auth-label {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+.form-auth-input {
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  font-size: 17px;
+  border-radius: 10px;
+}
+.visbility-password {
+  position: absolute;
+  right: 16px;
+  top: 34px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.form-Btn {
+  width: 25%;
+  padding: 8px;
+  cursor: pointer;
+  background-color: var(--blue-color);
+  border: none;
+  color: var(--white-color);
+  font-size: 18px;
+  margin: auto;
+  margin-top: 15px;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+.form-Btn:hover {
+  background-color: var(--move-color);
+}
+.need-help {
+  text-align: center;
+  margin: 35px 0;
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  .form-auth {
+    width: 95%;
+  }
+}

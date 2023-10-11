@@ -1,0 +1,40 @@
+.admin-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-box-rating {
+  border: 1px solid var(--border-color);
+  margin: 0 10px;
+  width: calc(100% / 5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.admin-box-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.admin-box-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-box-money {
+  font-size: 30px;
+}
+.box-rate {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .admin-rating {
+    flex-direction: column;
+  }
+  .admin-box-rating {
+    width: calc(100% / 2);
+    margin-bottom: 10px;
+  }
+}

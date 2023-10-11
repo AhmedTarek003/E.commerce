@@ -1,0 +1,59 @@
+.last-transactions {
+  flex: 7;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.last-transActions-Title {
+  font-size: 30px;
+  text-align: center;
+}
+.last-transaction-user {
+  display: flex;
+  align-items: center;
+}
+.last-transaction-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.lastTrans-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mani-lists {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 15px 0 25px;
+}
+.lastTrans-list {
+  margin-left: 15px;
+}
+.trans-btn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 2px;
+}
+.show-all-transactions {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .last-transactions {
+    margin: 0;
+    margin-top: 10px;
+  }
+  .lastTrans-list {
+    margin-left: 10px;
+  }
+}

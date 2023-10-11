@@ -1,0 +1,23 @@
+.admin-page {
+  min-height: calc(100vh - 400px);
+  display: flex;
+}
+.admin-Analysics {
+  overflow-y: scroll;
+  flex: 10 1;
+  height: calc(100vh - 67px);
+}
+.admin-users {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    flex-direction: column;
+  }
+  .admin-users {
+    flex-direction: column;
+    padding: 3px;
+  }
+}
