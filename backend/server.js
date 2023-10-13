@@ -16,11 +16,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: process.env.URL,
-  })
-);
+app.use(cors());
 
 // security middlewares
 app.use(helmet());
