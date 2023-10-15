@@ -6,8 +6,10 @@ import { productsActions } from "../slices/productsSlice";
 export function getAllProducts() {
   return async (dispatch) => {
     try {
+      dispatch(productsActions.setLoading());
       const { data } = await request.get(`api/products`);
       dispatch(productsActions.getProducts(data));
+      dispatch(productsActions.clearLoading());
     } catch (error) {
       // console.log(error.response.data.msg);
     }
@@ -50,6 +52,7 @@ export function getProductBySearch(search) {
 export function createProduct(info) {
   return async (dispatch, getState) => {
     try {
+      dispatch(productsActions.setLoading());
       const { data } = await request.post(`api/products`, info, {
         headers: {
           Authorization: `Bearer ` + getState().auth.user.token,
@@ -57,6 +60,7 @@ export function createProduct(info) {
       });
       console.log(data);
       dispatch(productsActions.createProduct(data));
+      dispatch(productsActions.clearLoading());
       toast.success("Created");
     } catch (error) {
       toast.error(error.response.data.msg);

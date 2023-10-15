@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Sidebar from "../../components/Admin-Sidebar/Sidebar";
 import "./addProduct.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createProduct } from "../../redux/apiCalls/productsApiCall";
+import Loading from "../../components/Loading/Loading";
 
 const AddProduct = () => {
   const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.products);
+
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [category, setCategories] = useState([]);
@@ -246,6 +249,7 @@ const AddProduct = () => {
           </form>
         </div>
       </div>
+      {loading && <Loading />}
     </section>
   );
 };

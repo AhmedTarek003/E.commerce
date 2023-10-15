@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-// import { Products } from "../../data";
 import ProductItem from "../ProductItem/ProductItem";
 import "./productsList.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../redux/apiCalls/productsApiCall";
+import Loading from "../Loading/Loading";
 
 const ProductsList = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
+  const { loading } = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getAllProducts());
@@ -15,9 +16,12 @@ const ProductsList = () => {
 
   return (
     <div className="productsList">
-      {products.map((item) => (
-        <ProductItem item={item} key={item._id} />
-      ))}
+      {products.length > 0 ? (
+        products.map((item) => <ProductItem item={item} key={item._id} />)
+      ) : (
+        <h1>No products</h1>
+      )}
+      {loading && <Loading />}
     </div>
   );
 };

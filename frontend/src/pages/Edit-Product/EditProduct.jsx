@@ -8,6 +8,7 @@ import {
 } from "../../redux/apiCalls/productsApiCall";
 import { useParams } from "react-router-dom";
 import ProductForm from "../../components/ProductForm/ProductForm";
+import Loading from "../../components/Loading/Loading";
 
 const EditProduct = () => {
   const [images, setImages] = useState(0);
@@ -18,9 +19,12 @@ const EditProduct = () => {
   const { product } = useSelector((state) => state.products);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     dispatch(getProductById(id));
-  }, [dispatch, id]);
+  }, [id, dispatch]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Handle Images swipper
   const handleImages = (index) => {
@@ -125,7 +129,11 @@ const EditProduct = () => {
               <button className="updated-product-image-btn">Updated</button>
             </div>
           </div>
-          {product && <ProductForm product={product} id={id} />}
+          {product && product._id === id ? (
+            <ProductForm product={product} id={id} />
+          ) : (
+            <Loading />
+          )}
         </div>
       </div>
     </section>
