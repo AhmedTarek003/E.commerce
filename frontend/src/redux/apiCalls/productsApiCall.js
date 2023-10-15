@@ -55,10 +55,12 @@ export function createProduct(info) {
           Authorization: `Bearer ` + getState().auth.user.token,
         },
       });
+      console.log(data);
       dispatch(productsActions.createProduct(data));
       toast.success("Created");
     } catch (error) {
       toast.error(error.response.data.msg);
+      console.log(error);
     }
   };
 }
